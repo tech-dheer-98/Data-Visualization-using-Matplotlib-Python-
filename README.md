@@ -41,25 +41,25 @@
 ## Visual Insights : (South Korea rates > Australia rates > Canada rates > USA rates), After year 2002 there is sudden rise in Gas Prices.
 
    
-## Project 2: Fifa Dataset (link: https://github.com/KeithGalli/matplotlib_tutorial/blob/master/fifa_data.csv)
+## Project 2: Fifa Dataset  (link: https://github.com/KeithGalli/matplotlib_tutorial/blob/master/fifa_data.csv)
 
-    Importing the Fifa Dataset using the Pandas Function
+   Importing the Fifa Dataset using the Pandas Function
     
-    Using the head() function to check the dataset.
+   Using the head() function to check the dataset.
     
    ## Plotting the Histogram: 
    
-      Defining the Legend Parameters.
+   Defining the Legend Parameters.
       
-      Plotting the Histogram ( Skill Level vs No of Players),title="Distribution of Player skills in Fifa 2018.
+   Plotting the Histogram ( Skill Level vs No of Players),title="Distribution of Player skills in Fifa 2018.
       
 ## Visual Insights :There are maximum Skillfull players which range between 60-70.
 
    ## Plotting the Pie-Chart:
    
-      Cheking the Value Counts of the players who use Left or Right Foot during the Match.
+   Cheking the Value Counts of the players who use Left or Right Foot during the Match.
       
-      Plotting the Pie Chart (left, right, title="Foot Preference in the FIFA Match")
+   Plotting the Pie Chart (left, right, title="Foot Preference in the FIFA Match")
       
 ## Visual Insights : There are 76.81% who use Right Foot and 23.19% who use left foot during the Match.
       
