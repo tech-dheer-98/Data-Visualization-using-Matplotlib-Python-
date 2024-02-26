@@ -1,76 +1,60 @@
-## Here I have created step by step introduction about how to prepare different types of Graphical Visuals ## 
-   IDE : Jupyter Notebook
-   
-   Python Libraries: Pandas,Numpy and Matplotlib
-   
-   Documentation Link : https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html
-   
-   Graphs: Line Graph,Bar-Graph,Histogram,Pie-Chart
-   
+## Introduction
+
+In this project, I have created a step-by-step guide on how to prepare various types of graphical visuals using Python's Matplotlib library. I used Jupyter Notebook as the IDE and leveraged Pandas, Numpy, and Matplotlib libraries for data manipulation and visualization.
+
+The project covers the following graphical visuals:
+
+- Line Graph
+- Bar Graph
+- Histogram
+- Pie Chart
+
+## Project Details
+
+### IDE: Jupyter Notebook
+### Python Libraries: Pandas, Numpy, Matplotlib
+### Documentation Link: [Matplotlib Documentation](https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html)
+
 ## Plotting Line Graph
 
-   Defining Legend Parameters ( Title,Lables,Fonts, Fontsize,Scale/Ticks,Color,marker,markersize,markeredgecolor etc)
-   
-   Plotting 2 Line Graphs 
-   
-   Defining 2nd Line Graph Parameters (Title,Lables,Fonts,Fontsize,Scale/Ticks,Color,marker,markersize,markeredgecolor etc).
-   
-   Resizing the Graph (figsize,dpi).
-   
-   Saving the Graph.(plt.savefig).
-   
+- Defined legend parameters including title, labels, fonts, fontsize, scale/ticks, color, marker, markersize, markeredgecolor, etc.
+- Plotted 2 line graphs.
+- Resized the graph using figsize and dpi.
+- Saved the graph using plt.savefig.
+
 ## Plotting Bar Graph
 
-   Defining the Legend Parameters.
-   
-   Plotting the Bar Graph.
-   
-   Giving the Hatch Pattern to the Bar Graph.
-   
-   Resizing the Bar Graph.
-   
-   Saving the Bar Graph.
-## Project 1 : Gas Datset (link:https://github.com/KeithGalli/matplotlib_tutorial/blob/master/gas_prices.csv)
+- Defined the legend parameters.
+- Plotted the bar graph.
+- Applied hatch pattern to the bar graph.
+- Resized the bar graph.
+- Saved the bar graph.
 
-   Importing the gas dataset using the Pandas function 
-   
-   Using the head() function to check the dataset.
-   
-   Plotting the Line Graph ( Years Vs Price in USD), title= "Gas Prices of Country over Year".
-   
-## Visual Insights : (South Korea rates > Australia rates > Canada rates > USA rates), After year 2002 there is sudden rise in Gas Prices.
+## Project 1: Gas Dataset
 
-   
-## Project 2: Fifa Dataset  (link: https://github.com/KeithGalli/matplotlib_tutorial/blob/master/fifa_data.csv)
+- Imported the gas dataset using the Pandas function.
+- Used the head() function to check the dataset.
+- Plotted the line graph (Years Vs Price in USD) with the title "Gas Prices of Countries over Years."
 
-   Importing the Fifa Dataset using the Pandas Function
-    
-   Using the head() function to check the dataset.
-    
-   ## Plotting the Histogram: 
-   
-   Defining the Legend Parameters.
-      
-   Plotting the Histogram ( Skill Level vs No of Players),title="Distribution of Player skills in Fifa 2018.
-      
-## Visual Insights :There are maximum Skillfull players which range between 60-70.
+### Visual Insights: 
+- South Korea has the highest gas rates, followed by Australia, Canada, and the USA.
+- There is a sudden rise in gas prices after the year 2002.
 
-   ## Plotting the Pie-Chart:
-   
-   Cheking the Value Counts of the players who use Left or Right Foot during the Match.
-      
-   Plotting the Pie Chart (left, right, title="Foot Preference in the FIFA Match")
-      
-## Visual Insights : There are 76.81% who use Right Foot and 23.19% who use left foot during the Match.
-      
-      
-      
-      
-    
-   
-                 
-   
-            
-   
-   
-   
+## Project 2: Fifa Dataset
+
+- Imported the Fifa dataset using the Pandas function.
+- Used the head() function to check the dataset.
+
+### Plotting the Histogram:
+- Defined the legend parameters.
+- Plotted the histogram (Skill Level vs Number of Players) with the title "Distribution of Player Skills in Fifa 2018."
+
+### Visual Insights:
+- The majority of players have skill levels ranging between 60-70.
+
+### Plotting the Pie Chart:
+- Checked the value counts of players who use their left or right foot during matches.
+- Plotted the pie chart (left, right) with the title "Foot Preference in the FIFA Match."
+
+### Visual Insights:
+- 76.81% of players use their right foot, while 23.19% use their left foot during matches.
