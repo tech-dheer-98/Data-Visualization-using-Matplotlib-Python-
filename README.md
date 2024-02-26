@@ -1,110 +1,107 @@
 ## Step-by-Step Guide to Data Visualization with Matplotlib
 
-Welcome to the Step-by-Step Guide to Data Visualization with Matplotlib! In this guide, we'll walk through the process of creating various graphical visuals using Python's Matplotlib library. Whether you're new to data visualization or looking to enhance your skills, this guide will provide you with the knowledge and tools you need to create compelling visualizations.
+### Introduction
 
-### 1. Installation
+This guide provides a step-by-step walkthrough of creating various graphical visuals using Python's Matplotlib library. We will cover the plotting of Line Graphs, Bar Graphs, Histograms, and Pie Charts, using two datasets: Gas Prices and FIFA Player Data. The goal is to demonstrate how to import, manipulate, and visualize data effectively.
 
-Before we begin, make sure you have Matplotlib installed in your Python environment. You can install it using pip:
+### Prerequisites
 
-```bash
-pip install matplotlib
-```
+- Basic knowledge of Python programming
+- Familiarity with Jupyter Notebook
+- Installed Python libraries: Pandas, NumPy, and Matplotlib
 
-### 2. Setting Up Your Environment
-
-For this guide, we'll be using Jupyter Notebook as our Integrated Development Environment (IDE). If you don't have Jupyter Notebook installed, you can install it via pip:
-
-```bash
-pip install jupyterlab
-```
-
-### 3. Importing Libraries
-
-Start by importing the necessary libraries: Matplotlib, Pandas, and NumPy. These libraries will enable us to manipulate data and create visualizations.
+### Step 1: Importing the Libraries
 
 ```python
-import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 ```
 
-### 4. Loading Data
+### Step 2: Importing the Datasets
 
-Next, load your dataset into your Jupyter Notebook. You can use Pandas to read data from various sources such as CSV files, Excel files, or databases.
+#### Gas Prices Dataset
 
 ```python
-# Example: Reading data from a CSV file
-data = pd.read_csv('your_dataset.csv')
+gas_data_url = 'https://github.com/KeithGalli/matplotlib_tutorial/blob/master/gas_prices.csv'
+gas_data = pd.read_csv(gas_data_url)
 ```
 
-### 5. Exploring Your Data
-
-Use Pandas functions such as `head()` to get a quick overview of your dataset and understand its structure.
+#### FIFA Player Dataset
 
 ```python
-# Display the first few rows of the dataset
-print(data.head())
+fifa_data_url = 'https://github.com/KeithGalli/matplotlib_tutorial/blob/master/fifa_data.csv'
+fifa_data = pd.read_csv(fifa_data_url)
 ```
 
-### 6. Plotting Graphs
+### Step 3: Exploring the Datasets
 
-Now it's time to create some visualizations! Matplotlib offers various types of graphs including Line Graphs, Bar Graphs, Histograms, Pie Charts, and more. Let's explore a few:
-
-#### Line Graphs
+#### Gas Prices Dataset
 
 ```python
-# Plotting a Line Graph
-plt.plot(x_values, y_values)
-plt.xlabel('X-axis Label')
-plt.ylabel('Y-axis Label')
-plt.title('Title of the Graph')
+print(gas_data.head())
+```
+
+#### FIFA Player Dataset
+
+```python
+print(fifa_data.head())
+```
+
+### Step 4: Plotting Line Graphs
+
+#### Gas Prices Over Years
+
+```python
+plt.plot(gas_data['Year'], gas_data['USA'], label='USA')
+plt.plot(gas_data['Year'], gas_data['Canada'], label='Canada')
+plt.plot(gas_data['Year'], gas_data['South Korea'], label='South Korea')
+plt.plot(gas_data['Year'], gas_data['Australia'], label='Australia')
+plt.xlabel('Year')
+plt.ylabel('Price in USD')
+plt.title('Gas Prices of Countries over Years')
+plt.legend()
 plt.show()
 ```
 
-#### Bar Graphs
+### Step 5: Plotting Bar Graphs
+
+#### Player Distribution in FIFA 2018
 
 ```python
-# Plotting a Bar Graph
-plt.bar(x_values, y_values)
-plt.xlabel('X-axis Label')
-plt.ylabel('Y-axis Label')
-plt.title('Title of the Graph')
+plt.bar(fifa_data['Overall'], fifa_data['Name'])
+plt.xlabel('Skill Level')
+plt.ylabel('Number of Players')
+plt.title('Distribution of Player Skills in FIFA 2018')
 plt.show()
 ```
 
-#### Histograms
+### Step 6: Plotting Histograms
+
+#### Skill Level Distribution in FIFA 2018
 
 ```python
-# Plotting a Histogram
-plt.hist(data, bins=10)
-plt.xlabel('Data')
-plt.ylabel('Frequency')
-plt.title('Histogram')
+plt.hist(fifa_data['Overall'])
+plt.xlabel('Skill Level')
+plt.ylabel('Number of Players')
+plt.title('Distribution of Player Skills in FIFA 2018')
 plt.show()
 ```
 
-#### Pie Charts
+### Step 7: Plotting Pie Charts
+
+#### Foot Preference in FIFA Match
 
 ```python
-# Plotting a Pie Chart
-plt.pie(sizes, labels=labels, autopct='%1.1f%%')
-plt.title('Title of the Pie Chart')
+foot_counts = fifa_data['Preferred Foot'].value_counts()
+plt.pie(foot_counts, labels=foot_counts.index, autopct='%1.2f%%')
+plt.title('Foot Preference in FIFA Match')
 plt.show()
 ```
 
-### 7. Customizing Graphs
+### Final Project Insights
 
-You can customize your graphs by adding legends, changing colors, adjusting font sizes, and more. Experiment with different parameters to create visually appealing visualizations.
+- Gas Prices: South Korea has the highest gas prices, followed by Australia, Canada, and the USA. There is a significant rise in gas prices after 2002.
+- FIFA Player Data: The majority of players have skill levels ranging from 60 to 70. Approximately 76.81% of players prefer using their right foot during matches.
 
-### 8. Saving Your Graphs
-
-Once you're satisfied with your visualization, you can save it as an image file using the `savefig()` function.
-
-```python
-# Saving the Graph as an Image File
-plt.savefig('graph.png')
-```
-
-### Conclusion
-
-Congratulations! You've successfully created various graphical visuals using Matplotlib. Keep exploring and experimenting with different datasets and visualization techniques to further enhance your skills in data visualization. Happy coding! 🚀📊
+By following this guide, you can create informative and visually appealing graphs using Matplotlib, enabling you to gain insights from your datasets.
